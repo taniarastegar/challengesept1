@@ -41,6 +41,6 @@ public class itemcontroller {
     public void updateItem(@RequestBody Item item) {
         itemDao = new ItemDao();
         itemDao.addItems();
-        itemDao.updateItem(item.getId(), item);
+        itemDao.updateItem(Integer.parseInt(item.getId()), item);
     }
 }
