@@ -17,18 +17,18 @@ import java.util.List;
 public class ItemDao  {
      public List<Item> items;
      public void addItems(){
-          items = new ArrayList<>();
-          items.add(new Item(1,"tania","china",20));
-          items.add( new Item(2, "dress","Australia",25));
-          items.add(new Item(3,"hat","USA",30));
+          items.add(new Item(String.valueOf(1),"tania","china",20));
+          items.add( new Item(String.valueOf(2), "dress","Australia",25));
+          items.add(new Item(String.valueOf(3),"hat","USA",30));
      }
      public void addItem(Item item){
           items.add(item);
      }
      public List<Item> getAllItems() {return items;}
 public void deleteItem(Item item)
-     {
-          items.remove(item.getId()-1);
+     {          
+     items.remove(Integer.parseInt(item.getId())-1);
+
      }
 
      public Item getItem (int id){
